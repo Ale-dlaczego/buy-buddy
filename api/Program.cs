@@ -14,7 +14,7 @@ if (app.Environment.IsDevelopment())
 
 var summaries = new[]
 {
-    "Freezing"
+    "Freezing", "Test"
 };
 
 app.MapGet("/weatherforecast", () =>
