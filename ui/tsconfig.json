@@ -1,0 +1,48 @@
+{
+  "compilerOptions": {
+    "target": "ES2023",
+    // Kompilacja do ES5 dla kompatybilności wstecznej
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    // Włączenie bibliotek dla środowisk webowych i ESNext
+    "allowJs": true,
+    // Umożliwia kompilację plików .js obok .ts/.tsx
+    "skipLibCheck": true,
+    // Pomija sprawdzanie typów w plikach długich bibliotek
+    "esModuleInterop": true,
+    // Umożliwia używanie importów w stylu ES6
+    "allowSyntheticDefaultImports": true,
+    // Umożliwia importy z domyślnymi eksportami w przypadku braku eksportu default
+    "strict": true,
+    // Aktywuje wszystkie opcje dotyczące ścisłej kontroli typów
+    "forceConsistentCasingInFileNames": true,
+    // Wymusza spójność wielkości liter w nazwach plików
+    "module": "esnext",
+    // Ustawienie modułu na ESNext
+    "moduleResolution": "node",
+    // Rozwiązywanie modułów zgodnie z Node.js
+    "resolveJsonModule": true,
+    // Pozwala importować pliki JSON jako moduły
+    "isolatedModules": true,
+    // Wymusza, by wszystkie pliki były traktowane jako moduły
+    "jsx": "react-jsx",
+    // Kompilacja JSX w sposób kompatybilny z React 17/18 i nowszymi
+    "noEmit": true
+    // Nie generuje plików wynikowych, gdy kompilujesz TypeScript bez transpilacji
+  },
+  "include": [
+    "src/**/*"
+    // Ścieżka do katalogu z kodem źródłowym
+  ],
+  "exclude": [
+    "node_modules",
+    // Ignorowanie katalogu node_modules
+    "build",
+    // Ignorowanie katalogu build (jeśli masz folder dla wyników kompilacji)
+    "dist"
+    // Ignorowanie katalogu dist
+  ]
+}
