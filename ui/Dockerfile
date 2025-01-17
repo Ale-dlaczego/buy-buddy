@@ -22,5 +22,5 @@ RUN yarn global add serve
 # Expose the port the app runs on
 EXPOSE 8090
 
-# Start the application using serve with SPA fallback
-CMD ["serve", "-s", "build", "-l", "8090", "-n"]
+# Start the application using serve
+CMD ["serve", "-s", "build", "-l", "8090"]
