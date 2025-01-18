@@ -9,7 +9,7 @@
     "react-scripts": "5.0.1"
   },
   "scripts": {
-    "generateEnvConfig": "node env.js",
+    "generateEnvConfig": "node scripts/generateEnvConfig.js",
     "start": "yarn generateEnvConfig && react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
