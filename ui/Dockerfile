@@ -23,4 +23,4 @@ RUN yarn global add serve
 EXPOSE 8090
 
 # Start the application using serve
-CMD ["docker/start.sh"]
+CMD ["./docker/start.sh"]
