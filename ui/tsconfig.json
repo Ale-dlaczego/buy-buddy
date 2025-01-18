@@ -42,7 +42,8 @@
     // Ignorowanie katalogu node_modules
     "build",
     // Ignorowanie katalogu build (jeśli masz folder dla wyników kompilacji)
-    "dist"
+    "dist",
+    "scripts/**/*",
     // Ignorowanie katalogu dist
   ]
 }
