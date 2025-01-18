@@ -10,8 +10,8 @@ To set up environment variables for your project, follow these steps:
   ENV_VARIABLE=variable_value
   ```
 
-2. **Update `public/config.template.js`:**
-  - Locate the `public/config.template.js` file in project.
+2. **Update `env.js`:**
+  - Locate the `env.js` file in project.
   - Add the necessary configuration to read the variables from the `.env` file using `window._env_`.
   - You can map key inside react code to key used in `.env` file with `__` prefix than `key` and `__` suffix.
 
