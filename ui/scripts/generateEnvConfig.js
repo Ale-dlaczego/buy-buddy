@@ -5,9 +5,9 @@ const dotenv = require('dotenv');
 
 dotenv.config();
 
-const templatePath = path.join(__dirname, '../public/config.template.js');
-const outputPath = path.join(__dirname, '../public/config.js');
-const outputBuildPath = path.join(__dirname, '../build/config.js');
+const templatePath = path.join(__dirname, '../env.js');
+const outputPath = path.join(__dirname, '../public/env.js');
+const outputBuildPath = path.join(__dirname, '../build/env.js');
 
 const envVariables = {
   ...process.env,
@@ -30,7 +30,7 @@ fs.readFile(templatePath, 'utf8', (err, data) => {
       console.error('Error writing config file:', err);
       process.exit(1);
     }
-    console.log('Config file generated successfully.');
+    console.log('Config file (/public) generated successfully.');
   });
 
   // write to build folder if exists
@@ -40,7 +40,7 @@ fs.readFile(templatePath, 'utf8', (err, data) => {
         console.error('Error writing config file:', err);
         process.exit(1);
       }
-      console.log('Config file generated successfully.');
+      console.log('Config file (/build) generated successfully.');
     });
   }
 });
