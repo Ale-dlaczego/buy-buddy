@@ -27,4 +27,4 @@ yarn-error.log*
 # local env files
 .env
 # generated env files
-public/config.js
+public/env.js
