@@ -2,12 +2,16 @@ import React from 'react';
 import './App.css';
 
 function App() {
+  const TEMPLATE_VAR = window._env_.TEMPLATE_VAR;
+
   return (
     <div className="App">
       <header className="App-header">
-        <p>
+        <div>
+          zmienna: {TEMPLATE_VAR}
+          <hr></hr>
           Edit <code>src/App.tsx</code> and save to reload.
-        </p>
+        </div>
         <a
           className="App-link"
           href="https://reactjs.org"
