@@ -26,6 +26,19 @@ var connectionString = Env.GetString("DATABASE_CONNECTION_STRING")
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseNpgsql(connectionString));
 
+// Configure CORS policy
+var allowedHosts = Env.GetString("ALLOWED_HOSTS")?.Split(',')
+                   ?? throw new InvalidOperationException("ALLOWED_HOSTS is not set in environment variables");
+builder.Services.AddCors(options =>
+{
+    options.AddDefaultPolicy(policyBuilder =>
+    {
+        policyBuilder.WithOrigins(allowedHosts)
+            .AllowAnyHeader()
+            .AllowAnyMethod();
+    });
+});
+
 var app = builder.Build();
 
 // Apply pending migrations at startup
@@ -41,6 +54,9 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI(c => { c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1"); });
 }
+
+// Use CORS
+app.UseCors();
 
 // Use controllers
 app.MapControllers();
